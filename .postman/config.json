@@ -1,0 +1,14 @@
+{
+  "workspace": {
+    "id": "c3f07c02-6987-497d-b527-aff40726bd24"
+  },
+  "entities": {
+    "collections": [],
+    "environments": [],
+    "specs": [
+      "..\\MojDom.API\\obj\\Debug\\net9.0\\EndpointInfo\\MojDom.API.json"
+    ],
+    "flows": [],
+    "globals": []
+  }
+}

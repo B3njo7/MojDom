@@ -2,10 +2,11 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
-using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 using MojDom.Core.Entities.Identity;
+using MojDom.Core.Interfaces;
 using MojDom.Infrastructure.Data;
+using MojDom.Infrastructure.Services;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -88,6 +89,10 @@ builder.Services.AddCors(options =>
               .AllowAnyMethod();
     });
 });
+
+// Servisi
+builder.Services.AddScoped<IPropertyService, PropertyService>();
+builder.Services.AddScoped<IPropertyManagerService, PropertyManagerService>();
 
 var app = builder.Build();
 
